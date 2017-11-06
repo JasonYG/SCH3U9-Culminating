@@ -1,3 +1,8 @@
+Boolean verify = true;
+float ellipseX = random(width);
+float ellipseY = random(175+75, height);
+float opacity = random(255);
+
 void intro_screen1() {
   background(0);
   fill(255);
@@ -20,7 +25,6 @@ void intro_screen1() {
 }
 
 void superposition() {
-  Boolean verify = true;
 
   background(0);
   fill(255);
@@ -106,13 +110,30 @@ void superposition() {
   } else if (!verify) {
     text("Turn off laser", width/2, 180);
   }
-  
-  if (mousePressed == true) {
-    verify = false;
+
+  if (!verify) {
+    fill(255, 0, 0);
+    triangle(width/2, 175+75/2, ellipseX-10, ellipseY-10, ellipseX+10, ellipseY+10);
   }
-  println(verify);
+  
+  fill(255, opacity);
+  ellipse(ellipseX, ellipseY, 50, 50);
 
-
+  if (verify) {
+    ellipseX = random(width);
+    ellipseY = random(175+75, height);
+    opacity = random(255);
+  }
 
   resetSettings();
+}
+
+void mousePressed() {
+  if (screen == 2 && mouseX > width/2 - 100 && mouseX < width/2 + 100 && mouseY > 175-75 && mouseY < 175+75) {
+    if (verify) {
+      verify = false;
+    } else if  (!verify) {
+      verify = true;
+    }
+  }
 }

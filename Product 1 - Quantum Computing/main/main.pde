@@ -10,6 +10,7 @@ int screen = 0; //for switching screens
 PImage open_screen; //loads welcome screen
 
 PFont century; //loads font
+
 void settings() {
   size(800, 600);
   //fullScreen();
@@ -17,8 +18,9 @@ void settings() {
 
 void setup() {
   open_screen = loadImage("open_screen.png");
-  
+
   century = createFont("Century_Regular.ttf", 50);
+  textFont(century);
 }
 
 void draw() {
@@ -28,19 +30,29 @@ void draw() {
     break;
 
   case 1:
-    intro_screen();
+    intro_screen1();
     break;
+
+  case 2:
+    superposition();
+    break;
+    
   }
 }
 
 /* resets all settings to default*/
 void resetSettings() {
   rectMode(CORNER);
+  ellipseMode(CENTER);
   imageMode(CORNER);
   textMode(CORNER);
+  
   fill(0);
   strokeWeight(1);
   stroke(0);
+  
+  textSize(18);
+  textAlign(LEFT);
 }
 
 void keyPressed() {
