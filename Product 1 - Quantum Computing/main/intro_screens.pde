@@ -117,6 +117,18 @@ void superposition() {
   }
   
   fill(255, opacity);
+  if (verify) {
+    ellipse(random(width), random(175+75, height), 50, 50);
+    ellipse(random(width), random(175+75, height), 50, 50);
+    ellipse(random(width), random(175+75, height), 50, 50);
+    ellipse(random(width), random(175+75, height), 50, 50);
+    ellipse(random(width), random(175+75, height), 50, 50);
+    ellipse(random(width), random(175+75, height), 50, 50);
+    ellipse(random(width), random(175+75, height), 50, 50);
+    ellipse(random(width), random(175+75, height), 50, 50);
+    ellipse(random(width), random(175+75, height), 50, 50);
+    ellipse(random(width), random(175+75, height), 50, 50);
+  }
   ellipse(ellipseX, ellipseY, 50, 50);
 
   if (verify) {
