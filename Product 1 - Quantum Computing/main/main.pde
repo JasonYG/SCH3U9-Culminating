@@ -9,6 +9,7 @@ int screen = 0; //for switching screens
 
 PImage open_screen; //loads welcome screen
 
+PFont century; //loads font
 void settings() {
   size(800, 600);
   //fullScreen();
@@ -16,6 +17,8 @@ void settings() {
 
 void setup() {
   open_screen = loadImage("open_screen.png");
+  
+  century = createFont("Century_Regular.ttf", 50);
 }
 
 void draw() {
@@ -44,11 +47,11 @@ void keyPressed() {
   if (key == CODED) {
     if (keyCode == RIGHT) {
       screen += 1;
-      background(255);
+      background(0);
     }
     if (keyCode == LEFT && screen != 0) {
       screen -=1;
-      background(255);
+      background(0);
     }
   }
 }
