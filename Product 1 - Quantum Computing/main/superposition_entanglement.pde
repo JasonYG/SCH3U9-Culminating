@@ -142,7 +142,49 @@ void entanglement() {
   }
   resetSettings();
 }
+void updateElectrons() {
+  for (int i = 0; i < 20; i++) {
+    Boolean check = false;
+    while (!check) {
+      check = true;
+      entangled[i][0] = random(width);
+      entangled[i][1] = random(120, height);
+      entangled[i][2] = random(width);
+      entangled[i][3] = random(120, height);
+      for (int k = 0; k < i; k++) {
+        if (k == i) {
+          continue;
+        }
+        if (dist(entangled[i][0], entangled[i][1], entangled[k][0], entangled[k][1]) < 50 || dist(entangled[i][0], entangled[i][1], entangled[k][2], entangled[k][3]) < 50) {
+          check = false;
+          break;
+        }
+        if (dist(entangled[i][2], entangled[i][3], entangled[k][0], entangled[k][1]) < 50 || dist(entangled[i][2], entangled[i][3], entangled[k][2], entangled[k][3]) < 50) {
+          check = false;
+          break;
+        }
+      }
+    }
+  }
+}
+void explanation() {
+  background(0);
+  fill(255);
 
+  textAlign(CENTER);
+  textSize(28);
+  text("Superposition and Entanglement", width/2, 50);
+
+  textAlign(LEFT);
+  textSize(18);
+  text("Superposition is the quantum phenomena in which quantum systems can exist in several \nstates at once until it is measured (\"Quantum computing 101\", 2013).", 50, 100);
+  text("In the previous simulation, an electron, represented by the circle, is in multiple states at \nonce until observed with a laser, where it is forced to be in only one state.", 50, 170);
+  text("Each state was represented by the position and opacity of the circle.", 50, 250);
+  text("In quantum computing, superposition is taken advantage of to perform many calculations simultaneously.", 50, 300);
+  text("Traditional computers make use of only ones and zeroes, whereas quantum computers \nmake use of ones, zeroes, and any \"superposition\" of ones and zeroes (\"Quantum \ncomputing 101\", 2013).", 50, 350); 
+  text("Entanglement is when quantum particles are inextricably", 50, 450);
+  resetSettings();
+}
 void mousePressed() {
   //button for laser
   if (screen == 2) {
@@ -159,7 +201,7 @@ void mouseDragged() {
   //move entangled electrons
   if (screen == 3) {
     for (int i = 0; i < 20; i++) {
-      if (dist(mouseX, mouseY, entangled[i][0], entangled[i][1]) < 50 || dist(mouseX, mouseY, entangled[i][2], entangled[i][3]) < 50) {
+      if (dist(mouseX, mouseY, entangled[i][0], entangled[i][1]) < 25 || dist(mouseX, mouseY, entangled[i][2], entangled[i][3]) < 25) {
         entangled[i][0] += mouseX - pmouseX;
         entangled[i][1] += mouseY - pmouseY;
         entangled[i][2] += mouseX - pmouseX;

@@ -40,6 +40,10 @@ void draw() {
   case 3:
     entanglement();
     break;
+    
+  case 4:
+    explanation();
+    break;
   }
 }
 
@@ -70,18 +74,13 @@ void keyPressed() {
     }
   }
   if (screen != 3) {
-    for (int i = 0; i < 20; i++) {
-      //creates random positions of electrons whenever key is pressed
-      entangled[i][0] = random(width);
-      entangled[i][1] = random(120, height);
-      entangled[i][2] = random(width);
-      entangled[i][3] = random(120, height);
-    }
-    for (int i = 0; i < 20; i++) {
-      //creates random colours that entangled electrons share
-      colours[i][0] = random(255);
-      colours[i][1] = random(255);
-      colours[i][2] = random(255);
-    }
+    updateElectrons();
+  }
+
+  for (int i = 0; i < 20; i++) {
+    //creates random colours that entangled electrons share
+    colours[i][0] = random(255);
+    colours[i][1] = random(255);
+    colours[i][2] = random(255);
   }
 }
