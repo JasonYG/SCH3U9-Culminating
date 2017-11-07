@@ -1,12 +1,16 @@
+Boolean verify = true;
+float ellipseX = random(width);
+float ellipseY = random(175+75, height);
+float opacity = random(255);
+
 void intro_screen() {
   background(0);
-  textFont(century);
   fill(255);
-  
+
   textAlign(CENTER);
   textSize(28);
   text("What is quantum computing?", width/2, 50);
-  
+
   textAlign(LEFT);
   textSize(18);
   text("Quantum computers are systems based on light rather than electricity.", 50, 100);
@@ -16,6 +20,6 @@ void intro_screen() {
   text("Ordinary computers can only have ones and zeroes, whereas in quantum computers, an \nelectron may have many possible spin states, creating a greater range of possibilities for \nmore complex computing.", 50, 340);
   text("In contemporary times, we lack the technology to obtain information on the interactions \nbetween light and electrons easily.", 50, 450);
   text("Some companies, for example, rely on materials supercooled to near absolute zero, which \nis highly inefficient.", 50, 520);
-  
+
   resetSettings();
 }
