@@ -202,10 +202,11 @@ void mouseDragged() {
   if (screen == 3) {
     for (int i = 0; i < 20; i++) {
       if (dist(mouseX, mouseY, entangled[i][0], entangled[i][1]) < 25 || dist(mouseX, mouseY, entangled[i][2], entangled[i][3]) < 25) {
-        entangled[i][0] += mouseX - pmouseX;
-        entangled[i][1] += mouseY - pmouseY;
-        entangled[i][2] += mouseX - pmouseX;
-        entangled[i][3] += mouseY - pmouseY;
+            entangled[i][0] += mouseX - pmouseX;
+            entangled[i][1] += mouseY - pmouseY;
+            entangled[i][2] += mouseX - pmouseX;
+            entangled[i][3] += mouseY - pmouseY;
+            break;
       }
     }
   }
