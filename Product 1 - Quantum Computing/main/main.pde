@@ -30,13 +30,16 @@ void draw() {
     break;
 
   case 1:
-    intro_screen1();
+    intro_screen();
     break;
 
   case 2:
     superposition();
     break;
-    
+
+  case 3:
+    entanglement();
+    break;
   }
 }
 
@@ -46,11 +49,11 @@ void resetSettings() {
   ellipseMode(CENTER);
   imageMode(CORNER);
   textMode(CORNER);
-  
+
   fill(0);
   strokeWeight(1);
   stroke(0);
-  
+
   textSize(18);
   textAlign(LEFT);
 }
@@ -64,6 +67,21 @@ void keyPressed() {
     if (keyCode == LEFT && screen != 0) {
       screen -=1;
       background(0);
+    }
+  }
+  if (screen != 3) {
+    for (int i = 0; i < 20; i++) {
+      //creates random positions of electrons whenever key is pressed
+      entangled[i][0] = random(width);
+      entangled[i][1] = random(120, height);
+      entangled[i][2] = random(width);
+      entangled[i][3] = random(120, height);
+    }
+    for (int i = 0; i < 20; i++) {
+      //creates random colours that entangled electrons share
+      colours[i][0] = random(255);
+      colours[i][1] = random(255);
+      colours[i][2] = random(255);
     }
   }
 }

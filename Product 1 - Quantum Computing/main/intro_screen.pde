@@ -1,8 +1,3 @@
-Boolean verify = true;
-float ellipseX = random(width);
-float ellipseY = random(175+75, height);
-float opacity = random(255);
-
 void intro_screen() {
   background(0);
   fill(255);

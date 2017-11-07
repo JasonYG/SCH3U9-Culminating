@@ -1,5 +1,14 @@
-void superposition() {
+Boolean verify = true;
+float ellipseX = random(width);
+float ellipseY = random(175+75, height);
+float opacity = random(255);
 
+//creates entangled electrons (circles)
+float[][] entangled = new float[20][4]; 
+float[][] colours = new float[20][3];
+//see void setup() for creation of circles
+
+void superposition() {
   background(0);
   fill(255);
 
@@ -89,7 +98,7 @@ void superposition() {
     fill(255, 0, 0);
     triangle(width/2, 175+75/2, ellipseX-10, ellipseY-10, ellipseX+10, ellipseY+10);
   }
-  
+
   fill(255, opacity);
   if (verify) {
     ellipse(random(width), random(175+75, height), 50, 50);
@@ -114,7 +123,29 @@ void superposition() {
   resetSettings();
 }
 
+void entanglement() {
+  background(0);
+  fill(255);
+
+  textAlign(LEFT);
+  textSize(28);
+  text("The phenomena of...", 25, 30);
+
+  textAlign(CENTER);
+  textSize(28);
+  text("ENTANGLEMENT", width/2, 100);
+
+  for(int i = 0; i < 20; i++) {
+    fill(colours[i][0], colours[i][1], colours[i][2]);
+    ellipse(entangled[i][0], entangled[i][1], 50, 50);
+    ellipse(entangled[i][2], entangled[i][3], 50, 50);
+  }
+
+  resetSettings();
+}
+
 void mousePressed() {
+  //button for laser
   if (screen == 2 && mouseX > width/2 - 100 && mouseX < width/2 + 100 && mouseY > 175-75 && mouseY < 175+75) {
     if (verify) {
       verify = false;
