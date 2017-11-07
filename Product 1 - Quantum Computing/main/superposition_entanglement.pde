@@ -135,22 +135,36 @@ void entanglement() {
   textSize(28);
   text("ENTANGLEMENT", width/2, 100);
 
-  for(int i = 0; i < 20; i++) {
+  for (int i = 0; i < 20; i++) {
     fill(colours[i][0], colours[i][1], colours[i][2]);
     ellipse(entangled[i][0], entangled[i][1], 50, 50);
     ellipse(entangled[i][2], entangled[i][3], 50, 50);
   }
-
   resetSettings();
 }
 
 void mousePressed() {
   //button for laser
-  if (screen == 2 && mouseX > width/2 - 100 && mouseX < width/2 + 100 && mouseY > 175-75 && mouseY < 175+75) {
-    if (verify) {
-      verify = false;
-    } else if  (!verify) {
-      verify = true;
+  if (screen == 2) {
+    if (mouseX > width/2 - 100 && mouseX < width/2 + 100 && mouseY > 175-75 && mouseY < 175+75) {
+      if (verify) {
+        verify = false;
+      } else if  (!verify) {
+        verify = true;
+      }
+    }
+  }
+}
+void mouseDragged() {
+  //move entangled electrons
+  if (screen == 3) {
+    for (int i = 0; i < 20; i++) {
+      if (dist(mouseX, mouseY, entangled[i][0], entangled[i][1]) < 50 || dist(mouseX, mouseY, entangled[i][2], entangled[i][3]) < 50) {
+        entangled[i][0] += mouseX - pmouseX;
+        entangled[i][1] += mouseY - pmouseY;
+        entangled[i][2] += mouseX - pmouseX;
+        entangled[i][3] += mouseY - pmouseY;
+      }
     }
   }
 }
