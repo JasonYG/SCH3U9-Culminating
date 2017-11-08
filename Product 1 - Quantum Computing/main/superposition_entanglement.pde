@@ -179,7 +179,7 @@ void explanation() {
   textAlign(LEFT);
   textSize(18);
   text("Superposition is the quantum phenomena in which quantum systems can exist in several \nstates at once until it is measured (\"Quantum computing 101\", 2013).", 50, 100);
-  text("In the previous simulation, an electron, represented by the circle, is in multiple states at \nonce until observed with a laser, where it is forced to be in only one state. Each state was \nrepresented by the position and opacity of the circle.", 50, 170);
+  text("In the previous simulation, an electron, represented by the circle, is in multiple states at \nonce until observed with a laser, where it is forced to be in only one state. Each state was \nrepresented by the position and opacity of the electron.", 50, 170);
   text("In quantum computing, superposition is taken advantage of to perform many calculations \nsimultaneously.", 50, 270);
   text("Traditional computers make use of only ones and zeroes, whereas quantum computers \nmake use of ones, zeroes, and any \"superposition\" of ones and zeroes (\"Quantum \ncomputing 101\", 2013).", 50, 350); 
  
@@ -195,7 +195,12 @@ void explanation2() {
 
   textAlign(LEFT);
   textSize(18);
-  text("", 50, 100);
+  text("Entanglement is when quantum particles are inextricably linked in perfect unison, \nregardless of the distance between them.", 50, 100);
+  text("These particles are so fundamentally connected that even when placed at distances \napproaching infinity, such as on opposite ends of the universe, they will still move in \nperfect unison (\"Quantum computing 101\", 2013).", 50, 170);
+  text("In the previous simulation, two like-coloured circles represent entangled electrons. \nWhen one electron was moved, the other moved too, despite there being no visible \nconnection between them.", 50, 270);
+  text("In quantum computing, if the state of one qubit, the equivalent to a binary digit or bit of \nclassical computing (Rouse, 2005), is known, then its entangled qubit counterpart's state \nis known as well.", 50, 370);
+  text("Describing a system of multiple qubits, i.e. a quantum computer, describes all the \ncorrelations between the different qubits, and not necessarily their individual states \n(Freiberger, 2015).", 50, 470);
+  
   resetSettings();
 }
 void mousePressed() {
