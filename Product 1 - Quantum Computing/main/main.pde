@@ -40,13 +40,17 @@ void draw() {
   case 3:
     super_explanation();
     break;
-    
+
   case 4:
     entanglement();
     break;
-  
+
   case 5:
     tangle_explanation();
+    break;
+    
+  case 6:
+    einstein_quote();
     break;
   }
 }
