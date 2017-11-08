@@ -38,15 +38,15 @@ void draw() {
     break;
 
   case 3:
-    entanglement();
+    super_explanation();
     break;
     
   case 4:
-    explanation();
+    entanglement();
     break;
   
   case 5:
-    explanation2();
+    tangle_explanation();
     break;
   }
 }
@@ -77,7 +77,7 @@ void keyPressed() {
       background(0);
     }
   }
-  if (screen != 3) {
+  if (screen != 4) {
     updateElectrons();
   }
 

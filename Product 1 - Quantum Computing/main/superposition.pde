@@ -120,7 +120,7 @@ void superposition() {
 }
 
 
-void explanation() {
+void super_explanation() {
   background(0);
   fill(255);
 
