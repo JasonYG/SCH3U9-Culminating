@@ -95,8 +95,9 @@ void superposition() {
   }
 
   if (!verify) {
+    //draws red laser (triangle) to the ellipse
     fill(255, 0, 0);
-    triangle(width/2, 175+75/2, ellipseX-10, ellipseY-10, ellipseX+10, ellipseY+10);
+    triangle(width/2, 175+75/2, ellipseX-15, ellipseY-15, ellipseX+15, ellipseY+15);
   }
 
   fill(255, opacity);
@@ -173,16 +174,28 @@ void explanation() {
 
   textAlign(CENTER);
   textSize(28);
-  text("Superposition and Entanglement", width/2, 50);
+  text("Superposition", width/2, 50);
 
   textAlign(LEFT);
   textSize(18);
   text("Superposition is the quantum phenomena in which quantum systems can exist in several \nstates at once until it is measured (\"Quantum computing 101\", 2013).", 50, 100);
-  text("In the previous simulation, an electron, represented by the circle, is in multiple states at \nonce until observed with a laser, where it is forced to be in only one state.", 50, 170);
-  text("Each state was represented by the position and opacity of the circle.", 50, 250);
-  text("In quantum computing, superposition is taken advantage of to perform many calculations simultaneously.", 50, 300);
+  text("In the previous simulation, an electron, represented by the circle, is in multiple states at \nonce until observed with a laser, where it is forced to be in only one state. Each state was \nrepresented by the position and opacity of the circle.", 50, 170);
+  text("In quantum computing, superposition is taken advantage of to perform many calculations \nsimultaneously.", 50, 270);
   text("Traditional computers make use of only ones and zeroes, whereas quantum computers \nmake use of ones, zeroes, and any \"superposition\" of ones and zeroes (\"Quantum \ncomputing 101\", 2013).", 50, 350); 
-  text("Entanglement is when quantum particles are inextricably", 50, 450);
+ 
+  resetSettings();
+}
+void explanation2() {
+  background(0);
+  fill(255);
+
+  textAlign(CENTER);
+  textSize(28);
+  text("Entanglement", width/2, 50);
+
+  textAlign(LEFT);
+  textSize(18);
+  text("", 50, 100);
   resetSettings();
 }
 void mousePressed() {

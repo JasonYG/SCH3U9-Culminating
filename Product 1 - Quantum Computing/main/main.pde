@@ -44,6 +44,10 @@ void draw() {
   case 4:
     explanation();
     break;
+  
+  case 5:
+    explanation2();
+    break;
   }
 }
 
