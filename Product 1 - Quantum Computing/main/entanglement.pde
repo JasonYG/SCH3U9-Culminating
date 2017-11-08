@@ -43,6 +43,10 @@ void updateElectrons() {
           check = false;
           break;
         }
+        if (dist(entangled[i][0], entangled[i][1], entangled[i][2], entangled[i][3]) < 25) {
+          check = false;
+          break;
+        }
       }
     }
   }
