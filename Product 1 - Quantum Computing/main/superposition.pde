@@ -130,8 +130,8 @@ void super_explanation() {
 
   textAlign(LEFT);
   textSize(18);
-  text("Superposition is the quantum phenomena in which quantum systems can exist in several \nstates at once until it is measured (\"Quantum computing 101\", 2013).", 50, 100);
-  text("In the previous simulation, an electron, represented by the circle, is in multiple states at \nonce until observed with a laser, where it is forced to be in only one state. Each state was \nrepresented by the position and opacity of the electron.", 50, 170);
+  text("Superposition is the quantum phenomena in which quantum particles can exist in several \nstates at once until they are measured (\"Quantum computing 101\", 2013).", 50, 100);
+  text("In the previous simulation, an electron, represented by the circle, is in multiple states at \nonce until it is observed with a laser, where it is forced to be in only one state. Each state \nwas represented by the position and opacity of the electron.", 50, 170);
   text("In quantum computing, superposition is taken advantage of to perform many calculations \nsimultaneously.", 50, 270);
   text("Traditional computers make use of only ones and zeroes, whereas quantum computers \nmake use of ones, zeroes, and any \"superposition\" of ones and zeroes (\"Quantum \ncomputing 101\", 2013).", 50, 350); 
  
