@@ -42,14 +42,17 @@ void draw() {
     break;
 
   case 4:
+    cat();
+    break;
+  case 5:
     entanglement();
     break;
 
-  case 5:
+  case 6:
     tangle_explanation();
     break;
     
-  case 6:
+  case 7:
     einstein_quote();
     break;
   }

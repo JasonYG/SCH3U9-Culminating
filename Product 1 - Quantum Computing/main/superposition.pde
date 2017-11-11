@@ -134,8 +134,20 @@ void super_explanation() {
   text("In the previous simulation, an electron, represented by the circle, is in multiple states at \nonce until it is observed with a laser, where it is forced to be in only one state. Each state \nwas represented by the position and opacity of the electron.", 50, 170);
   text("In quantum computing, superposition is taken advantage of to perform many calculations \nsimultaneously.", 50, 270);
   text("Traditional computers make use of only ones and zeroes, whereas quantum computers \nmake use of ones, zeroes, and any \"superposition\" of ones and zeroes (\"Quantum \ncomputing 101\", 2013).", 50, 350); 
- 
   resetSettings();
+}
+
+void cat() {
+  background(0);
+  fill(255);
+
+  textAlign(CENTER);
+  textSize(28);
+  text("Schrödinger's cat", width/2, 50);
+  
+  textAlign(LEFT);
+  textSize(18);
+  text("Schrödinger's cat is a famous thought experiment used to point out the flaws in quantum \nmechanics, specifically superposition.", 50, 100);
 }
 
 void mousePressed() {

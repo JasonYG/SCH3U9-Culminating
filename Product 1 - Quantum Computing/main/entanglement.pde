@@ -83,13 +83,13 @@ void einstein_quote() {
   
   textAlign(LEFT);
   textSize(25);
-  text("-Albert Einstein when describing quantum entanglement", 100, 400);
+  text("-Albert Einstein on quantum entanglement", 100, 400);
   
   resetSettings();
 }
 void mouseDragged() {
   //move entangled electrons
-  if (screen == 4) {
+  if (screen == 5) {
     for (int i = 0; i < 20; i++) {
       if (dist(mouseX, mouseY, entangled[i][0], entangled[i][1]) < 25 || dist(mouseX, mouseY, entangled[i][2], entangled[i][3]) < 25) {
         entangled[i][0] += mouseX - pmouseX;
