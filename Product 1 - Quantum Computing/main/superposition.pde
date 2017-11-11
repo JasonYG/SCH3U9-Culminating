@@ -137,3 +137,16 @@ void super_explanation() {
  
   resetSettings();
 }
+
+void mousePressed() {
+  //button for laser
+  if (screen == 2) {
+    if (mouseX > width/2 - 100 && mouseX < width/2 + 100 && mouseY > 175-75 && mouseY < 175+75) {
+      if (verify) {
+        verify = false;
+      } else if  (!verify) {
+        verify = true;
+      }
+    }
+  }
+}
