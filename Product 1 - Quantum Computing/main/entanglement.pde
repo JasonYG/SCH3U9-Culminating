@@ -62,7 +62,7 @@ void tangle_explanation() {
   textAlign(LEFT);
   textSize(18);
   text("Entanglement is when quantum particles are inextricably linked in perfect unison, \nregardless of the distance between them.", 50, 100);
-  text("These particles are so fundamentally connected that even when placed at distances \napproaching infinity, such as on opposite ends of the universe, they will still move in \nperfect unison (\"Quantum computing 101\", 2013).", 50, 170);
+  text("These particles are so fundamentally connected that even when placed at distances \napproaching infinity, such as on opposite ends of the universe, they will still act in \nperfect unison (\"Quantum computing 101\", 2013).", 50, 170);
   text("In the previous simulation, two like-coloured circles represent entangled electrons. \nWhen one electron was moved, the other moved too, despite there being no visible \nconnection between them.", 50, 270);
   text("In quantum computing, if the state of one qubit, the equivalent to a binary digit or bit of \nclassical computing (Rouse, 2005), is known, then its entangled qubit counterpart's state \nis known as well.", 50, 370);
   text("Describing a system of multiple qubits, i.e. a quantum computer, describes all the \ncorrelations between the different qubits, and not necessarily their individual states \n(Freiberger, 2015).", 50, 470);
