@@ -21,6 +21,8 @@ void setup() {
 
   century = createFont("Century_Regular.ttf", 50);
   textFont(century);
+  
+  inAs = loadImage("InAs lattice structure.png");
 }
 
 void draw() {
@@ -34,12 +36,19 @@ void draw() {
     break;
 
   case 2:
-    superposition();
+    materials();
     break;
-
+    
   case 3:
-    super_explanation();
+    inGaAs();
     break;
+  //case 2:
+    //superposition();
+    //break;
+
+//  case 3:
+//    super_explanation();
+//    break;
 
   case 4:
     cat();
