@@ -31,10 +31,10 @@ void inGaAs() {
   
   textAlign(LEFT);
   textSize(18);
-  text("InAs is an ionic compound, and is thus named indium arsenide. It has a high \nmelting point of 942 degrees celcius (AZoM, 2013) due to its intermolecular forces.", 50, 100);
+  text("InAs is an ionic compound, and is thus named indium arsenide. It has a high \nmelting point of 942 degrees celsius (AZoM, 2013) due to its intermolecular forces.", 50, 100);
   text("The ion-ion forces that hold it together require a lot of energy to break, hence the high \nmelting point.", 50, 170);
   text("GaAs is an ionic compound as well, and is thusly named gallium \narsenide. It shares many properties to InAs.", 50, 250);
-  text("According to official chemical naming guidelines outlined by the \nInternational Union of Pure and Applied (IUPAC), the formal \nname of indium gallium arsenide is InXGa1-XAs, where X is the \nproportion of InAs and 1-X is the proportion of GaAs (\"International Union of Pure and \nApplied Chemistry\").", 50, 320);
+  text("According to official chemical naming guidelines outlined by the \nInternational Union of Pure and Applied Chemistry (IUPAC), the \nformal name of indium gallium arsenide is InXGa1-XAs, where X \nis the proportion of InAs and 1-X is the proportion of GaAs (\"International Union of Pure \nand Applied Chemistry\").", 50, 320);
   text("InGaAs is an excellent semiconductor due to its unusually high electron mobility. \nElectrons are able to move easily throughout the material.", 50, 480);
 
   imageMode(CENTER);
@@ -68,4 +68,19 @@ void semiconductor() {
   text("Band gap diagram (Wikimedia Commons, 2015)", 620, 560);
   
   resetSettings();
+}
+void semiconductor_continued() {
+  background(0);
+  fill(255);
+  
+  textAlign(CENTER);
+  textSize(28);
+  text("Semiconductors continued", width/2, 50);
+  
+  textAlign(LEFT);
+  textSize(18);
+  text("Semiconductors, because of their small band gap, have a conductivity between \nconductors and insulators. Conductors' conduction and valence band overlap, while \ninsulators have a large gap between their conduction and valence band.", 50, 100);
+  text("Indium and gallium are all part of group 13 of the periodic table, or the boron group, and \nare characterized by having 3 valence electrons (Kotz, Treichel, Townsend, Raymond, \n2009).", 50, 200);
+  text("Indium and gallium have similar electronegativities, at 1.78 and 1.81 respectively (Lide, \n2000). Indium arsenide has a small band gap of 0.354 eV, and gallium arsenide has a \nband gap of 1.424 eV (AZoM, 2013). These small band gaps allow for high electron \nmobility, due to there being less distance for electrons to travel, which in turn creates an \nexcellent semiconductor.", 50, 300);
+  
 }
