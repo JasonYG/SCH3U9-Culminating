@@ -23,6 +23,8 @@ void setup() {
   textFont(century);
   
   inAs = loadImage("InAs lattice structure.png");
+  band_gap = loadImage("Band gap diagram.png");
+  
 }
 
 void draw() {
@@ -42,6 +44,14 @@ void draw() {
   case 3:
     inGaAs();
     break;
+    
+  case 4:
+    semiconductor();
+    break;
+  
+  case 5:
+    semiconductor_continued();
+    break;
   //case 2:
     //superposition();
     //break;
@@ -50,12 +60,13 @@ void draw() {
 //    super_explanation();
 //    break;
 
-  case 4:
-    cat();
-    break;
-  case 5:
-    entanglement();
-    break;
+//  case 4:
+//    cat();
+//    break;
+
+//  case 5:
+//  entanglement();
+//  break;
 
   case 6:
     tangle_explanation();

@@ -1,4 +1,5 @@
 PImage inAs;
+PImage band_gap;
 void materials() {
   background(0);
   fill(255);
@@ -34,13 +35,37 @@ void inGaAs() {
   text("The ion-ion forces that hold it together require a lot of energy to break, hence the high \nmelting point.", 50, 170);
   text("GaAs is an ionic compound as well, and is thusly named gallium \narsenide. It shares many properties to InAs.", 50, 250);
   text("According to official chemical naming guidelines outlined by the \nInternational Union of Pure and Applied (IUPAC), the formal \nname of indium gallium arsenide is InXGa1-XAs, where X is the \nproportion of InAs and 1-X is the proportion of GaAs (\"International Union of Pure and \nApplied Chemistry\").", 50, 320);
-  text("InGaAs is an excellent semiconductor due to its unusually high electron mobility. \nElectrons are able to move easily throughout the material.", 50, 470);
+  text("InGaAs is an excellent semiconductor due to its unusually high electron mobility. \nElectrons are able to move easily throughout the material.", 50, 480);
 
   imageMode(CENTER);
   image(inAs, 700, 270, 200, 200);
   textAlign(CENTER);
   textSize(10);
   text("Ionic lattice structure of InAs (B., 2017)", 700, 380);
+  
+  resetSettings();
+}
+
+void semiconductor() {
+  background(0);
+  fill(255);
+  
+  textAlign(CENTER);
+  textSize(28);
+  text("Semiconductors", width/2, 50);
+  
+  textAlign(LEFT);
+  textSize(18);
+  text("Semiconductors rely on almost-overlapping electron orbitals to conduct electricity \n(HyperPhysics, 2015).", 50, 100);
+  text("The band gap, or the distance between the valence band and conduction band, must be \nsmall for a semiconductor to work.", 50, 170);
+  text("The band gap of a material can be predicted using periodic trends; atoms with higher \nelectronegativity, especially non-metals towards the top right of the periodic table, have \nbigger band gaps due to their high effective nuclear charge (ENC) and empty conduction \nband (\"Bonds, Bands, and Doping: How Do LEDs Work?\", 2002).", 50, 250);
+  text("Using the example of sodium (Na) and \nfluorine (F), Na's conduction band, or its three \nempty 3p degenerate orbitals, is close to its \nvalence band, or its 3s orbital, and it thus has a \nlow band gap. F, on the other hand, has a large \ndistance between its conduction band, the 3s \norbital, and its valence band, the 2p orbital, \ndue to its high ENC, which makes the radius of the atom smaller.", 50, 380);
+  
+  imageMode(CENTER); 
+  image(band_gap, 620, 450, 350, 200);
+  textAlign(CENTER);
+  textSize(10);
+  text("Band gap diagram (Wikimedia Commons, 2015)", 620, 560);
   
   resetSettings();
 }
