@@ -23,7 +23,10 @@ void setup() {
   textFont(century);
   
   inAs = loadImage("InAs lattice structure.png");
+  
   band_gap = loadImage("Band gap diagram.png");
+  
+  n_v_pair = loadImage("nitrogen vacancy in diamond.jpg");
   
 }
 
@@ -52,9 +55,19 @@ void draw() {
   case 5:
     semiconductor_continued();
     break;
-  //case 2:
-    //superposition();
-    //break;
+    
+  case 6:
+    inAs_reaction();
+    break;
+  
+  case 7:
+    alternative_methods();
+    break;
+  
+  /* UNCOMMENT THESE WHEN FINISHED EVERYTHING ELSE */
+//case 2:
+//superposition();
+//break;
 
 //  case 3:
 //    super_explanation();
@@ -68,13 +81,13 @@ void draw() {
 //  entanglement();
 //  break;
 
-  case 6:
-    tangle_explanation();
-    break;
+//  case 6:
+//    tangle_explanation();
+//    break;
     
-  case 7:
-    einstein_quote();
-    break;
+//  case 7:
+//    einstein_quote();
+//    break;
   }
 }
 
