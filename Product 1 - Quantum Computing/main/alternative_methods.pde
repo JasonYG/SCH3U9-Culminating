@@ -12,6 +12,9 @@ void alternative_methods() {
   text("Another method currently being tested to facilitate electron capture is through carbon \nlattices, with a particular focus on diamond.", 50, 100);
   text("In diamond, all carbon atoms are covalently bonded to neighbouring carbons, forming a \ncovalent network with extremely strong intermolecular forces.", 50, 170);
   text("When a carbon atom in the lattice is replaced with a nitrogen atom and another carbon \natom is removed, a nitrogen-vacancy pair (N-V) is created, where an extra electron is \ntrapped by an otherwise strong lattice (Derbyshire, 2014).", 50, 250);
+  text("Silicon carbide (SiC) is another compound being experimented on as a way to capture \nelectrons (Abate, 2017).", 50, 350);
+  text("Its lattice structure is not unlike diamond's, where \nsilicon atoms are covalently bonded to carbon atoms \nto form a covalent network.", 50, 420);
+  text("Rather than nitrogen atoms replacing carbon atoms, \nsilicon atoms are instead removed to create colour \ncenters - areas in the lattice with one or more \nunpaired electrons (The Editors of Encyclopædia Britannica, 2006).", 50, 510);
   
   imageMode(CENTER);
   image(n_v_pair, 650, 480, 300, 175);
