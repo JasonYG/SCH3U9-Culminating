@@ -21,4 +21,29 @@ void alternative_methods() {
   textAlign(CENTER);
   textSize(10);
   text("(Thomas, 2012)", 650, 585);
+  
+  resetSettings();
+}
+void siC() {
+  background(0);
+  fill(255);
+
+  textAlign(CENTER);
+  textSize(28);
+  text("SiC", width/2, 50);
+  
+  textAlign(LEFT);
+  textSize(18);
+  text("SiC is an ionic compound, and is thus named silicon carbide, however, it is also known as \ncarborundum (Abate, 2017).", 50, 100);
+
+  text("The following chemical reaction can occur to produce silicon carbide:", 50, 170);
+  textAlign(CENTER);
+  textSize(28);
+  text("SiO2 + 3C --> SiC + 2CO", width/2, 220);
+  
+  textAlign(LEFT);
+  textSize(18);
+  text("This reaction is an example of a thermal degradation reaction (Weimer, 1997), which is in \nessence a chemical decomposition reaction caused by heat.", 50, 270);
+  
+  resetSettings();
 }

@@ -63,6 +63,10 @@ void draw() {
   case 7:
     alternative_methods();
     break;
+    
+  case 8:
+    siC();
+    break;
   
   /* UNCOMMENT THESE WHEN FINISHED EVERYTHING ELSE */
 //case 2:
