@@ -68,6 +68,10 @@ void draw() {
     siC();
     break;
   
+  case 9:
+    stoichiometry();
+    break;
+    
   /* UNCOMMENT THESE WHEN FINISHED EVERYTHING ELSE */
 //case 2:
 //superposition();
