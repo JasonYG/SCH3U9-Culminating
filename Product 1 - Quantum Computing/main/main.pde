@@ -28,6 +28,9 @@ void setup() {
   
   n_v_pair = loadImage("nitrogen vacancy in diamond.jpg");
   
+  stoich1 = loadImage("Stoichiometry Part 1.png");
+  
+  stoich2 = loadImage("Stoichiometry Part 2.png");
 }
 
 void draw() {
@@ -72,6 +75,9 @@ void draw() {
     stoichiometry();
     break;
     
+  case 10:
+    stoichiometry2();
+    break;
   /* UNCOMMENT THESE WHEN FINISHED EVERYTHING ELSE */
 //case 2:
 //superposition();
