@@ -26,10 +26,12 @@ void setup() {
   
   band_gap = loadImage("Band gap diagram.png");
   
+  free_energy1 = loadImage("free energy1.png");
+  free_energy2 = loadImage("free energy2.png");
+  
   n_v_pair = loadImage("nitrogen vacancy in diamond.jpg");
   
   stoich1 = loadImage("Stoichiometry Part 1.png");
-  
   stoich2 = loadImage("Stoichiometry Part 2.png");
 }
 
@@ -62,20 +64,24 @@ void draw() {
   case 6:
     inAs_reaction();
     break;
-  
+    
   case 7:
+    free_energy_calc();
+    break;
+  
+  case 8:
     alternative_methods();
     break;
     
-  case 8:
+  case 9:
     siC();
     break;
   
-  case 9:
+  case 10:
     stoichiometry();
     break;
     
-  case 10:
+  case 11:
     stoichiometry2();
     break;
   /* UNCOMMENT THESE WHEN FINISHED EVERYTHING ELSE */
