@@ -33,6 +33,8 @@ void setup() {
   
   stoich1 = loadImage("Stoichiometry Part 1.png");
   stoich2 = loadImage("Stoichiometry Part 2.png");
+  
+  curve = loadImage("titration_curve.png");
 }
 
 void draw() {
@@ -83,6 +85,14 @@ void draw() {
     
   case 11:
     stoichiometry2();
+    break;
+    
+  case 12:
+    acid_base();
+    break;
+    
+  case 13:
+    career();
     break;
   /* UNCOMMENT THESE WHEN FINISHED EVERYTHING ELSE */
 //case 2:

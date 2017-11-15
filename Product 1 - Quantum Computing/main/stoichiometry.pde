@@ -32,5 +32,7 @@ void stoichiometry2() {
   textAlign(LEFT);
   textSize(18);
   text("To summarize, to create a silicon carbide quantum chip that is 5 mm by 5 mm by 1 mm, \none would need 0.0237 g SiO2 and 0.0153 g C to produce 0.0158 g SiC.", 50, 350);
-  text("All calculations were done using molar masses of atoms found on the periodic table (Haynes, 2011).", 50, 420);
+  text("All calculations were done using molar masses of atoms found on the periodic table \n(Haynes, 2011).", 50, 420);
+
+  resetSettings();
 }
