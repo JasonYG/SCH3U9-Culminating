@@ -40,5 +40,6 @@ void free_energy_calc() {
   textAlign(LEFT);
   textSize(18);
   text("Since the free energy is negative, this implies that the reaction is spontaneous \n(Libretexts, 2016), and is exergonic.", 50, 415);
+  
   resetSettings();
 }
