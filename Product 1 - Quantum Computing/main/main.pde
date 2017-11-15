@@ -21,19 +21,19 @@ void setup() {
 
   century = createFont("Century_Regular.ttf", 50);
   textFont(century);
-  
+
   inAs = loadImage("InAs lattice structure.png");
-  
+
   band_gap = loadImage("Band gap diagram.png");
-  
+
   free_energy1 = loadImage("free energy1.png");
   free_energy2 = loadImage("free energy2.png");
-  
+
   n_v_pair = loadImage("nitrogen vacancy in diamond.jpg");
-  
+
   stoich1 = loadImage("Stoichiometry Part 1.png");
   stoich2 = loadImage("Stoichiometry Part 2.png");
-  
+
   curve = loadImage("titration_curve.png");
 }
 
@@ -50,74 +50,74 @@ void draw() {
   case 2:
     materials();
     break;
-    
+
   case 3:
     inGaAs();
     break;
-    
+
   case 4:
     semiconductor();
     break;
-  
+
   case 5:
     semiconductor_continued();
     break;
-    
+
   case 6:
     inAs_reaction();
     break;
-    
+
   case 7:
     free_energy_calc();
     break;
-  
+
   case 8:
     alternative_methods();
     break;
-    
+
   case 9:
     siC();
     break;
-  
+
   case 10:
     stoichiometry();
     break;
-    
+
   case 11:
     stoichiometry2();
     break;
-    
+
   case 12:
     acid_base();
     break;
-    
+
   case 13:
     career();
     break;
-  /* UNCOMMENT THESE WHEN FINISHED EVERYTHING ELSE */
-//case 2:
-//superposition();
-//break;
 
-//  case 3:
-//    super_explanation();
-//    break;
+  case 14:
+    superposition();
+    break;
 
-//  case 4:
-//    cat();
-//    break;
+  case 15:
+    super_explanation();
+    break;
 
-//  case 5:
-//  entanglement();
-//  break;
+  case 16:
+    cat();
+    break;
 
-//  case 6:
-//    tangle_explanation();
-//    break;
-    
-//  case 7:
-//    einstein_quote();
-//    break;
+  case 17:
+    entanglement();
+    break;
+
+  case 18:
+    tangle_explanation();
+    break;
+
+  case 19:
+    einstein_quote();
+    break;
   }
 }
 
