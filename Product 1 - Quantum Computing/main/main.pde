@@ -35,6 +35,8 @@ void setup() {
   stoich2 = loadImage("Stoichiometry Part 2.png");
 
   curve = loadImage("titration_curve.png");
+  
+  cat = loadImage("super cat.png");
 }
 
 void draw() {
@@ -104,18 +106,26 @@ void draw() {
     break;
 
   case 16:
-    cat();
+    alive_or_dead();
     break;
 
   case 17:
-    entanglement();
+    wrong();
     break;
 
   case 18:
+    cat();
+    break;
+    
+  case 19:
+    entanglement();
+    break;
+
+  case 20:
     tangle_explanation();
     break;
 
-  case 19:
+  case 21:
     einstein_quote();
     break;
   }
@@ -138,7 +148,7 @@ void resetSettings() {
 
 void keyPressed() {
   if (key == CODED) {
-    if (keyCode == RIGHT) {
+    if (keyCode == RIGHT && screen != 16) {
       screen += 1;
       background(0);
     }

@@ -1,3 +1,5 @@
+PImage cat;
+
 Boolean verify = true;
 float ellipseX = random(width);
 float ellipseY = random(175+75, height);
@@ -136,7 +138,34 @@ void super_explanation() {
   text("Traditional computers make use of only ones and zeroes, whereas quantum computers \nmake use of ones, zeroes, and any \"superposition\" of ones and zeroes (\"Quantum \ncomputing 101\", 2013).", 50, 350); 
   resetSettings();
 }
+void alive_or_dead() {
+  background(0);
+  fill(255);
 
+  textAlign(CENTER);
+  textSize(28);
+  text("Is this cat dead or alive?", width/2, 50);
+
+  imageMode(CENTER);
+  image(cat, width/2, 250, 550, 350);
+
+  rectMode(CENTER);
+  fill(255);
+  rect(width*0.25, 510, 350, 120);
+  textMode(CENTER);
+  fill(0);
+  textSize(50);
+  text("YES", width*0.25, 525);
+
+  rectMode(CENTER);
+  fill(255);
+  rect(width*0.75, 510, 350, 120);
+  fill(0);
+  textSize(50);
+  text("NO", width*0.75, 525);
+
+  resetSettings();
+}
 void cat() {
   background(0);
   fill(255);
@@ -144,7 +173,7 @@ void cat() {
   textAlign(CENTER);
   textSize(28);
   text("Schrödinger's cat", width/2, 50);
-  
+
   textAlign(LEFT);
   textSize(18);
   text("Schrödinger's cat is a famous thought experiment used to point out the flaws in quantum \nmechanics, specifically superposition.", 50, 100);
@@ -154,6 +183,16 @@ void cat() {
   text("And such is why Schrödinger is sketical of superposition.", 50, 445);
 
 
+  resetSettings();
+}
+void wrong() {
+  background(255);
+  fill(255, 0, 0);
+  
+  textAlign(CENTER);
+  textSize(200);
+  text("WRONG!", width/2, height/2);
+  
   resetSettings();
 }
 
@@ -166,6 +205,15 @@ void mousePressed() {
       } else if  (!verify) {
         verify = true;
       }
+    }
+  }
+  //button for yes or no
+  if (screen == 16) {
+    if (mouseX > width*0.25 - 175 && mouseX < width*0.25 + 175 && mouseY < 510 + 60 && mouseY > 510 - 60) {
+      screen++;
+    }
+    if (mouseX > width*0.75 - 175 && mouseX < width*0.75 + 175 && mouseY < 510 + 60 && mouseY > 510 - 60) {
+      screen++;
     }
   }
 }
