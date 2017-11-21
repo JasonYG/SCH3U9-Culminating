@@ -95,38 +95,42 @@ void draw() {
     break;
 
   case 13:
+    titration_explanation();
+    break;
+    
+  case 14:
     career();
     break;
 
-  case 14:
+  case 15:
     superposition();
     break;
 
-  case 15:
+  case 16:
     super_explanation();
     break;
 
-  case 16:
+  case 17:
     alive_or_dead();
     break;
 
-  case 17:
+  case 18:
     wrong();
     break;
 
-  case 18:
+  case 19:
     cat();
     break;
     
-  case 19:
+  case 20:
     entanglement();
     break;
 
-  case 20:
+  case 21:
     tangle_explanation();
     break;
 
-  case 21:
+  case 22:
     einstein_quote();
     break;
   }
@@ -149,7 +153,7 @@ void resetSettings() {
 
 void keyPressed() {
   if (key == CODED) {
-    if (keyCode == RIGHT && screen != 16) {
+    if (keyCode == RIGHT && screen != 17) {
       screen += 1;
       background(0);
     }

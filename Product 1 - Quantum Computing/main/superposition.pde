@@ -197,7 +197,7 @@ void cat() {
 }
 void mousePressed() {
   //button for laser
-  if (screen == 14) {
+  if (screen == 15) {
     if (mouseX > width/2 - 100 && mouseX < width/2 + 100 && mouseY > 175-75 && mouseY < 175+75) {
       if (verify) {
         verify = false;
@@ -207,7 +207,7 @@ void mousePressed() {
     }
   }
   //button for yes or no
-  if (screen == 16) {
+  if (screen == 17) {
     if (mouseX > width*0.25 - 175 && mouseX < width*0.25 + 175 && mouseY < 510 + 60 && mouseY > 510 - 60) {
       screen++;
     }
