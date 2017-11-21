@@ -166,6 +166,16 @@ void alive_or_dead() {
 
   resetSettings();
 }
+void wrong() {
+  background(255);
+  fill(255, 0, 0);
+  
+  textAlign(CENTER);
+  textSize(180);
+  text("WRONG!", width/2, height/2);
+  
+  resetSettings();
+}
 void cat() {
   background(0);
   fill(255);
@@ -180,22 +190,12 @@ void cat() {
   text("In the experiment, a cat is placed in a sealed box with a radioactive sample, a \nGeiger counter, and a bottle of poison. If the Geiger counter, which can detect radioactive \nmaterial, is triggered, then the bottle of poison will be smashed and the cat will be killed. .", 50, 170);
   text("However, due to the chances of the radioactive material decaying being around 50/50, \nthere is no way to predict if the cat is alive or dead until the box is opened and the cat is \nobserved (Merz, 2013)", 50, 270);
   text("According to quantum superposition principle, the cat would be both dead and alive until \nit was observed, however for objects as large as a cat, this does not make logical sense.", 50, 370);
-  text("And such is why Schrödinger is sketical of superposition.", 50, 445);
+  text("And such is why Schrödinger was skeptical of superposition.", 50, 445);
+  text("It's ironic how this thought experiment is often used to explain superposition, when in \nreality, it was devised to illustrate the foolishness of quantum mechanics.", 50, 490);
 
 
   resetSettings();
 }
-void wrong() {
-  background(255);
-  fill(255, 0, 0);
-  
-  textAlign(CENTER);
-  textSize(200);
-  text("WRONG!", width/2, height/2);
-  
-  resetSettings();
-}
-
 void mousePressed() {
   //button for laser
   if (screen == 14) {
