@@ -193,7 +193,6 @@ void cat() {
   text("And such is why Schrödinger was skeptical of superposition.", 50, 445);
   text("It's ironic how this thought experiment is often used to explain superposition, when in \nreality, it was devised to illustrate the foolishness of quantum mechanics.", 50, 490);
 
-
   resetSettings();
 }
 void mousePressed() {
