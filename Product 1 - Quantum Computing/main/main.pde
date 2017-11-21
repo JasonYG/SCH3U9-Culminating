@@ -30,6 +30,7 @@ void setup() {
   free_energy2 = loadImage("free energy2.png");
 
   n_v_pair = loadImage("nitrogen vacancy in diamond.jpg");
+  siC_reaction = loadImage("SiC reaction.png");
 
   stoich1 = loadImage("Stoichiometry Part 1.png");
   stoich2 = loadImage("Stoichiometry Part 2.png");

@@ -1,4 +1,5 @@
 PImage n_v_pair;
+PImage siC_reaction;
 void alternative_methods() {
   background(0);
   fill(255);
@@ -37,9 +38,8 @@ void siC() {
   text("SiC is an ionic compound, and is thus named silicon carbide, however, it is also known as \ncarborundum (Abate, 2017).", 50, 100);
 
   text("The following chemical reaction can occur to produce silicon carbide:", 50, 170);
-  textAlign(CENTER);
-  textSize(28);
-  text("SiO2 + 3C --> SiC + 2CO", width/2, 220);
+  imageMode(CENTER);
+  image(siC_reaction, width/2, 215, 400, 60);
   
   textAlign(LEFT);
   textSize(18);
