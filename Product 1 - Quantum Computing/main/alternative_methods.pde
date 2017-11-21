@@ -11,11 +11,11 @@ void alternative_methods() {
   textAlign(LEFT);
   textSize(18);
   text("Another method currently being tested to facilitate electron capture is through carbon \nlattices, with a particular focus on diamond.", 50, 100);
-  text("In diamond, all carbon atoms are covalently bonded to neighbouring carbons, forming a \ncovalent network with extremely strong intermolecular forces.", 50, 170);
-  text("When a carbon atom in the lattice is replaced with a nitrogen atom and another carbon \natom is removed, a nitrogen-vacancy pair (N-V) is created, where an extra electron is \ntrapped by an otherwise strong lattice (Derbyshire, 2014).", 50, 250);
-  text("Silicon carbide (SiC) is another compound being experimented on as a way to capture \nelectrons (Abate, 2017).", 50, 350);
-  text("Its lattice structure is not unlike diamond's, where \nsilicon atoms are covalently bonded to carbon atoms \nto form a covalent network.", 50, 420);
-  text("Rather than nitrogen atoms replacing carbon atoms, \nsilicon atoms are instead removed to create colour \ncenters - areas in the lattice with one or more \nunpaired electrons (The Editors of Encyclopædia Britannica, 2006).", 50, 510);
+  text("In diamond, all carbon atoms are covalently bonded to neighbouring carbons, forming a \ncovalent network with extremely strong intermolecular forces. This property of diamond \ncan be taken advantage of to create a stable environment for qubits to function. When a \ncarbon atom in the lattice is replaced with a nitrogen atom and another carbon atom is \nremoved, a nitrogen-vacancy pair (N-V) is created, where an extra electron is trapped by \nan otherwise strong lattice (Derbyshire, 2014). This trapped electron can be used as part \nof a quantum chip.", 50, 170);
+  //text("When a carbon atom in the lattice is replaced with a nitrogen atom and another carbon \natom is removed, a nitrogen-vacancy pair (N-V) is created, where an extra electron is \ntrapped by an otherwise strong lattice (Derbyshire, 2014).", 50, 250);
+  text("Silicon carbide (SiC) is another compound being experimented on as a way to capture \nelectrons (Abate, 2017). Its lattice structure is not \nunlike diamond's, where silicon atoms are covalently \nbonded to carbon atoms to form a covalent network.", 50, 375);
+  //text("Its lattice structure is not unlike diamond's, where \nsilicon atoms are covalently bonded to carbon atoms \nto form a covalent network.", 50, 420);
+  text("Rather than nitrogen atoms replacing carbon atoms, \nsilicon atoms are instead removed to create colour \ncenters - areas in the lattice with one or more \nunpaired electrons (The Editors of Encyclopædia Britannica, 2006).", 50, 500);
   
   imageMode(CENTER);
   image(n_v_pair, 650, 480, 300, 175);
