@@ -38,6 +38,8 @@ void setup() {
   curve = loadImage("titration_curve.png");
   
   cat = loadImage("super cat.png");
+  
+  oxygen_diagram = loadImage("oxygen energy diagram.png");
 }
 
 void draw() {
@@ -133,6 +135,19 @@ void draw() {
   case 22:
     einstein_quote();
     break;
+    
+  case 23:
+    quantum_model();
+    break;
+    
+  case 24:
+    oxygen();
+    break;
+    
+  case 25:
+    uncertainty();
+    break;
+    
   }
 }
 

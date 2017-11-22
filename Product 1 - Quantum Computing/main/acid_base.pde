@@ -38,7 +38,7 @@ void titration_explanation() {
   text("Titration is a technique used to experimentally determine the concentration of an \nunknown solution. In most cases, a solution of known concentration, or the titrant, is \nadded to a known volume of an unknown concentration, or the analyte. Acid-base \ntitrations use pairs of acids and bases for the titrant and analyte (Clark, 2013).", 50, 100);
   text("An indicator is used to measure the pH of the mixed solutions. When it changes colour, it \nis known as the end point of the titration, when the acid and base neutralize each other. \nThe point at which two solutions are mixed together in exact proportions is known as the \nequivalence point.", 50, 225);
   text("In the previous example, a strong acid, the titrant, is added to a strong base, the analyte. \nThe pH starts at 14, and slowly decreases until near the equivalence point, where there is \na steep plunge in pH.", 50, 350);
-  text("By knowing the volume of titrant added at the equivalence point, the concentration of the analyte can be calculated using the exact proportions of the acid to the base, i.e. the molar ratio, of the chemical reaction.", 50, 400);
+  text("By knowing the volume of titrant added at the equivalence point, the concentration of the \nanalyte can be calculated using the exact proportions of the acid to the base, i.e. the molar \nratio, of the chemical reaction.", 50, 450);
 
   resetSettings();
 }

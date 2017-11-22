@@ -77,6 +77,8 @@ void einstein_quote() {
     rect(width/2, height/2, i, i);
   }
   
+  fill(0);
+  
   textAlign(CENTER);
   textSize(50);
   text("\"Spooky action at a distance\"", width/2, 250);
