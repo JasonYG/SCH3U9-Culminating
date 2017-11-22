@@ -22,17 +22,3 @@ void oxygen() {
   
   resetSettings();
 }
-void uncertainty() {
-  background(0);
-  fill(255);
-
-  textAlign(CENTER);
-  textSize(28);
-  text("Heisenberg's uncertainty principle", width/2, 50);
-  
-  textAlign(LEFT);
-  textSize(18);
-  text("The uncertainty principle is a well known idea in quantum mechanics that, similarly to the idea of superposition, states that it is impossible to know both the position and momentum of a particle with absolute precision. Instead, the more we know about one value, the less we know the other (Jha, 2013).", 50, 100);
-  
-  
-}
