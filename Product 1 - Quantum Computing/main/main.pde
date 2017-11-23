@@ -40,6 +40,7 @@ void setup() {
   cat = loadImage("super cat.png");
   
   oxygen_diagram = loadImage("oxygen energy diagram.png");
+  uncertainty_equation = loadImage("Heisenberg uncertainty.png");
 }
 
 void draw() {
