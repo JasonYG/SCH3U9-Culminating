@@ -14,4 +14,10 @@ void uncertainty() {
   
   imageMode(CENTER);
   image(uncertainty_equation, width/2, 300, 275, 90);
+  
+  textAlign(LEFT);
+  textSize(18);
+  text("Delta x in this equation represents the uncertainty in position, delta p represents the \nuncertainty in momentum, and h bar represents Planck's constant divided by 2 pi. ", 50, 370);
+  text("In order for this inequality to remain true, the product of the uncertainty in position \nand uncertainty in momentum must be always equal to or greater than Planck's constant \ndivided by 4 pi, meaning as one measurement, either the momentum or position, becomes \nmore and more accurate, the other will become less accurate.", 50, 430);
+  text("", 50, 500);
 }
