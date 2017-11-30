@@ -169,11 +169,11 @@ void alive_or_dead() {
 void wrong() {
   background(255);
   fill(255, 0, 0);
-  
+
   textAlign(CENTER);
   textSize(180);
   text("WRONG!", width/2, height/2);
-  
+
   resetSettings();
 }
 void cat() {
@@ -213,6 +213,15 @@ void mousePressed() {
     }
     if (mouseX > width*0.75 - 175 && mouseX < width*0.75 + 175 && mouseY < 510 + 60 && mouseY > 510 - 60) {
       screen++;
+    }
+  }
+  //button for last screen
+  if (screen == 26) {
+    if (mouseX > width*0.25 - 175 && mouseX < width*0.25 + 175 && mouseY < 510 + 60 && mouseY > 510 - 60) {
+      screen = 0;
+    }
+    if (mouseX > width*0.75 - 175 && mouseX < width*0.75 + 175 && mouseY < 510 + 60 && mouseY > 510 - 60) {
+    link("https://docs.google.com/document/d/180rKx16U1ASxNJ6FdRtCwlIwd4RDjTyloptTSTgvDUo/edit?usp=sharing");
     }
   }
 }

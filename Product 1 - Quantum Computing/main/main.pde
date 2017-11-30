@@ -1,6 +1,6 @@
 /*
  * Author: Jason Guo
- * Revision Date: November 5, 2017
+ * Revision Date: November 26, 2017
  * Program Name: Product 1 - Quantum Computing
  * Program Description:
  *         Program developed as a part of the SCH3U9 culminating project.
@@ -149,6 +149,9 @@ void draw() {
     uncertainty();
     break;
     
+  case 26:
+    references();
+    break;
   }
 }
 
@@ -169,7 +172,7 @@ void resetSettings() {
 
 void keyPressed() {
   if (key == CODED) {
-    if (keyCode == RIGHT && screen != 17) {
+    if (keyCode == RIGHT && screen != 17 && screen != 26) {
       screen += 1;
       background(0);
     }
