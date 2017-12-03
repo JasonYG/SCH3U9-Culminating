@@ -1,10 +1,11 @@
 /*
  * Author: Jason Guo
- * Revision Date: November 26, 2017
+ * Revision Date: November 29, 2017
  * Program Name: Product 1 - Quantum Computing
  * Program Description:
  *         Program developed as a part of the SCH3U9 culminating project.
  */
+
 int screen = 0; //for switching screens
 
 PImage open_screen; //loads welcome screen
