@@ -155,14 +155,14 @@ void alive_or_dead() {
   textMode(CENTER);
   fill(0);
   textSize(50);
-  text("YES", width*0.25, 525);
+  text("DEAD", width*0.25, 525);
 
   rectMode(CENTER);
   fill(255);
   rect(width*0.75, 510, 350, 120);
   fill(0);
   textSize(50);
-  text("NO", width*0.75, 525);
+  text("ALIVE", width*0.75, 525);
 
   resetSettings();
 }
