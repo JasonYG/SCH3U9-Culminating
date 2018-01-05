@@ -12,6 +12,8 @@ PImage open_screen; //loads welcome screen
 
 PFont century; //loads font
 
+PImage intro_text; //loads intro screen text
+
 void settings() {
   size(800, 600);
 }
@@ -22,6 +24,7 @@ void setup() {
   century = createFont("Century_Regular.ttf", 50);
   textFont(century);
 
+  intro_text = loadImage("What is molecular dynamics.png");
 }
 
 void draw() {
@@ -30,6 +33,9 @@ void draw() {
     opening_screen();
     break;
 
+  case 1:
+    intro_screen();
+    break;
   }
 }
 
@@ -52,11 +58,11 @@ void keyPressed() {
   if (key == CODED) {
     if (keyCode == RIGHT /*&& screen != PUT END SCREEN NUMBER HERE*/) {
       screen += 1;
-      background(0);
+      background(255);
     }
     if (keyCode == LEFT && screen != 0) {
       screen -=1;
-      background(0);
+      background(255);
     }
   }
 }
