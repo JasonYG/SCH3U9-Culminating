@@ -13,6 +13,7 @@ PImage open_screen; //loads welcome screen
 PFont century; //loads font
 
 PImage intro_text; //loads intro screen text
+PImage background_text; //loads background screen text
 
 void settings() {
   size(800, 600);
@@ -25,6 +26,7 @@ void setup() {
   textFont(century);
   
   intro_text = loadImage("What is biomolecular modeling.png");
+  background_text = loadImage("Background information.png");
 
 }
 
@@ -37,6 +39,9 @@ void draw() {
   case 1:
     intro_screen();
     break;
+    
+  case 2:
+    background_info();
   }
 }
 
