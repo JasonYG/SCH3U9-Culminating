@@ -14,6 +14,8 @@ PFont century; //loads font
 
 PImage intro_text; //loads intro screen text
 PImage background_text; //loads background screen text
+PImage hydrocarbon_text; //loads hydrocarbon screen text
+PImage hydrocarbon_naming; //loads hydrocarbon naming text
 
 void settings() {
   size(800, 600);
@@ -27,6 +29,8 @@ void setup() {
   
   intro_text = loadImage("What is biomolecular modeling.png");
   background_text = loadImage("Background information.png");
+  hydrocarbon_text = loadImage("Hydrocarbons.png");
+  hydrocarbon_naming = loadImage("Hydrocarbon naming.png");
 
 }
 
@@ -42,6 +46,16 @@ void draw() {
     
   case 2:
     background_info();
+    break;
+    
+  case 3:
+    hydrocarbon_info();
+    break;
+    
+  case 4:
+    hydrocarbon_table();
+    break;
+    
   }
 }
 
