@@ -38,14 +38,12 @@ void setup() {
 
   gas_particles = new ArrayList();
 
-  for (int i = 0; i < 20; i++) {
+  for (int i = 0; i < 10; i++) {
     float x = random(50, width-50);
     float y = random(50, height-50);
     float xvel = random(-10, 10);
     float yvel = random(-10, 10);
     float size = 20;
-    
-    println(x, y, xvel, yvel);
 
     gas_particles.add(new Particle(x, y, xvel, yvel, size));
   }

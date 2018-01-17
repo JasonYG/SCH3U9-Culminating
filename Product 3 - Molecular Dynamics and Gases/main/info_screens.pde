@@ -21,11 +21,3 @@ void applications_cont() {
   imageMode(CENTER);
   image(applications_cont_text, width/2, height/2, width, height);
 }
-
-void dab() {
-  background(255);
-  for (Particle p : gas_particles) {
-    p.move();
-    p.update();
-  }
-}
