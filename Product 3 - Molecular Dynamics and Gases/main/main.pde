@@ -12,7 +12,14 @@ PImage open_screen; //loads welcome screen
 
 PFont century; //loads font
 
-PImage intro_text; //loads intro screen text
+//loads all the information screens' text
+PImage intro_text;
+PImage how_MD_works_text; 
+PImage applications_text;
+PImage applications_cont_text;
+
+
+ArrayList<Particle> gas_particles;
 
 void settings() {
   size(800, 600);
@@ -25,6 +32,23 @@ void setup() {
   textFont(century);
 
   intro_text = loadImage("What is molecular dynamics.png");
+  how_MD_works_text = loadImage("How MD works.png");
+  applications_text = loadImage("Applications.png");
+  applications_cont_text = loadImage("Applications continued.png");
+
+  gas_particles = new ArrayList();
+
+  for (int i = 0; i < 20; i++) {
+    float x = random(50, width-50);
+    float y = random(50, height-50);
+    float xvel = random(-10, 10);
+    float yvel = random(-10, 10);
+    float size = 20;
+    
+    println(x, y, xvel, yvel);
+
+    gas_particles.add(new Particle(x, y, xvel, yvel, size));
+  }
 }
 
 void draw() {
@@ -34,7 +58,19 @@ void draw() {
     break;
 
   case 1:
-    intro_screen();
+    dab();
+    break;
+
+  case 2:
+    how_MD_works();
+    break;
+
+  case 3:
+    applications();
+    break;
+
+  case 4:
+    applications_cont();
     break;
   }
 }
