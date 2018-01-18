@@ -21,6 +21,8 @@ PImage applications_cont_text;
 
 ArrayList<Particle> gas_particles;
 
+boolean verify = true;
+
 void settings() {
   size(800, 600);
 }
@@ -38,15 +40,9 @@ void setup() {
 
   gas_particles = new ArrayList();
 
-  for (int i = 0; i < 10; i++) {
-    float x = random(50, width-50);
-    float y = random(50, height-50);
-    float xvel = random(-10, 10);
-    float yvel = random(-10, 10);
-    float size = 20;
+  //frameRate(10);
+  reset_particles(gas_particles);
 
-    gas_particles.add(new Particle(x, y, xvel, yvel, size));
-  }
 }
 
 void draw() {
@@ -56,7 +52,7 @@ void draw() {
     break;
 
   case 1:
-    dab();
+    ideal_gas();
     break;
 
   case 2:
