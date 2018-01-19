@@ -17,9 +17,15 @@ PImage intro_text;
 PImage how_MD_works_text; 
 PImage applications_text;
 PImage applications_cont_text;
-
+PImage kmt_text;
+PImage ideal_gas_text;
+PImage non_ideal_gas_text;
+PImage vdw_equation_text;
+PImage intermolecular_text;
+PImage sa_polarizability_text;
 
 ArrayList<Particle> gas_particles;
+ArrayList<Reaction> reactant_particles;
 
 boolean verify = true;
 
@@ -37,12 +43,20 @@ void setup() {
   how_MD_works_text = loadImage("How MD works.png");
   applications_text = loadImage("Applications.png");
   applications_cont_text = loadImage("Applications continued.png");
-
+  kmt_text = loadImage("Kinetic Molecular Theory.png");
+  ideal_gas_text = loadImage("Ideal Gases.png");
+  non_ideal_gas_text = loadImage("Non-ideal Gases.png");
+  vdw_equation_text = loadImage("Van der Waals equation.png");
+  intermolecular_text = loadImage("Intermolecular forces.png");
+  sa_polarizability_text = loadImage("SA and polarizability.png"); 
+  
+  
+  
   gas_particles = new ArrayList();
+  reactant_particles = new ArrayList();
 
-  //frameRate(10);
   reset_particles(gas_particles);
-
+  reset_reaction(reactant_particles);
 }
 
 void draw() {
@@ -52,7 +66,8 @@ void draw() {
     break;
 
   case 1:
-    ideal_gas();
+    gas_phase_reaction();
+    //intro_screen();
     break;
 
   case 2:
@@ -65,6 +80,34 @@ void draw() {
 
   case 4:
     applications_cont();
+    break;
+  
+  case 5:
+    kmt();
+    break;
+    
+  case 6:
+    ideal_gas_screen();
+    break;
+    
+  case 7:
+    non_ideal_gas();
+    break;
+    
+  case 8:
+    vdw();
+    break;
+    
+  case 9:
+    intermolecular_forces();
+    break;
+    
+  case 10:
+    sa_polarizability();
+    break;
+    
+  case 11:
+    ideal_gas_simulation();
     break;
   }
 }

@@ -7,9 +7,8 @@ class Particle {
     velocityY = velY;
     size = r;
 
-    float xpos_force = map(xpos, width, width/2, 0.5, 0);
-    float ypos_force = map(ypos, width, width/2, 0.5, 0);
-    a_force = xpos_force + ypos_force;
+    float distance = dist(xpos, ypos, width/2, height/2);
+    a_force = map(distance, 0, sqrt(sq(width/2) + sq(height/2)), 0.5, 0);
   }
   void move() {
     xpos += velocityX;
@@ -22,11 +21,12 @@ class Particle {
     float colour = kinetic_energyX + kinetic_energyY;
 
     //colorMode(HSB, 255);
+    stroke(0);
     fill(colour, colour, colour);
     ellipse(xpos, ypos, size * 2, size * 2);
   }
   //bounces ellipses back when they collide 
-  void collision(ArrayList <Particle> gas_particles) {
+  void collision() {
     //walls
     if (xpos + size > width) {
       xpos -= 10;
@@ -57,7 +57,7 @@ class Particle {
           xpos += 10;
           p.xpos -= 10;
         }
-        
+
         if (ypos < p.ypos) {
           ypos -= 5;
           p.ypos += 5;
@@ -65,7 +65,7 @@ class Particle {
           ypos -= 5;
           p.ypos += 5;
         }
-        
+
         float vx = velocityX;
         float vy = velocityY;
         velocityX = p.velocityX;
@@ -99,6 +99,21 @@ class Particle {
         continue;
       }
       if (dist(xpos, ypos, p.xpos, p.ypos) < size * 2) {
+        if (xpos < p.xpos) {
+          xpos -= 5;
+          p.xpos += 5;
+        } else if (xpos > p.xpos) {
+          xpos += 5;
+          p.xpos -= 5;
+        }
+
+        if (ypos < p.ypos) {
+          ypos -= 5;
+          p.ypos += 5;
+        } else if (ypos > p.ypos) {
+          ypos -= 5;
+          p.ypos += 5;
+        }
         float vx = velocityX;
         float vy = velocityY;
         velocityX = p.velocityX;
@@ -108,16 +123,23 @@ class Particle {
       }
       if (dist(xpos, ypos, p.xpos, p.ypos) > size * 2) {
         if (xpos > width/2 && velocityX > 0) {
-          velocityX -= a_force;
+          xpos -= a_force;
         } else if (xpos < width/2 && velocityX < 0) {
-          velocityX += a_force;
+          xpos += a_force;
         }
-
-        if (ypos > height/2 && velocityY > 0) {
-          velocityY -= a_force;
-        } else if (ypos < height/2 && velocityY < 0) {
-          velocityY += a_force;
-        }
+      }
+    }
+  }
+  void non_ideal_update() {
+    for (Particle p : gas_particles) {
+      if (this == p) {
+       continue; 
+      }
+      if (dist(xpos, ypos, p.xpos, p.ypos) < size * 5) {
+        stroke(100, 100);
+        strokeWeight(5);
+        line(xpos, ypos, p.xpos, p.ypos);
+        resetSettings();
       }
     }
   }
@@ -141,7 +163,6 @@ void reset_particles(ArrayList <Particle> particles_list) {
       }
       for (Particle p : particles_list) {
         if (dist(x, y, p.xpos, p.ypos) < size * 2 + 10) {
-          println("overlap dab");
           verify = true;
           break;
         }
@@ -156,15 +177,16 @@ void reset_particles(ArrayList <Particle> particles_list) {
 }
 
 boolean ideal = true; //checks if ideal gas screen is present
-void ideal_gas() {
+void ideal_gas_simulation() {
   background(255);
   for (Particle p : gas_particles) {
     p.move();
     p.update();
     if (ideal) {
-      p.collision(gas_particles);
+      p.collision();
     } else {
       p.non_ideal_collision(gas_particles);
+      p.non_ideal_update();
     }
   }
   rectMode(CENTER);
