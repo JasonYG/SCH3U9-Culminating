@@ -20,7 +20,7 @@ class Particle {
     float kinetic_energyY = map(abs(velocityY), 0, 10, 0, 255/2);
     float colour = kinetic_energyX + kinetic_energyY;
 
-    //colorMode(HSB, 255);
+    colorMode(RGB, 255, 255, 255);
     stroke(0);
     fill(colour, colour, colour);
     ellipse(xpos, ypos, size * 2, size * 2);
@@ -29,18 +29,18 @@ class Particle {
   void collision() {
     //walls
     if (xpos + size > width) {
-      xpos -= 10;
+      xpos -= 5;
       velocityX *= -1;
     } else if (xpos  - size < 0) {
-      xpos += 10;
+      xpos += 5;
       velocityX *= -1;
     }
 
     if (ypos + size > height) {
-      ypos -= 10;
+      ypos -= 5;
       velocityY *= -1;
     } else if (ypos  - size < 0) {
-      ypos += 10;
+      ypos += 5;
       velocityY *= -1;
     }
 
@@ -51,11 +51,11 @@ class Particle {
       }
       if (dist(xpos, ypos, p.xpos, p.ypos) < size * 2) {
         if (xpos < p.xpos) {
-          xpos -= 10;
-          p.xpos += 10;
+          xpos -= 5;
+          p.xpos += 5;
         } else if (xpos > p.xpos) {
-          xpos += 10;
-          p.xpos -= 10;
+          xpos += 5;
+          p.xpos -= 5;
         }
 
         if (ypos < p.ypos) {
@@ -78,10 +78,10 @@ class Particle {
   void non_ideal_collision(ArrayList <Particle> gas_particles) {
     //walls
     if (xpos + size > width) {
-      xpos -= 10;
+      xpos -= 5;
       velocityX *= -1;
     } else if (xpos  - size < 0) {
-      xpos += 10;
+      xpos += 5;
       velocityX *= -1;
     }
 

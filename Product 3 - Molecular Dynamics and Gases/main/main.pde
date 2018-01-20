@@ -57,6 +57,8 @@ void setup() {
 
   reset_particles(gas_particles);
   reset_reaction(reactant_particles);
+  
+  //frameRate(5);
 }
 
 void draw() {
@@ -125,16 +127,20 @@ void resetSettings() {
 
   textSize(18);
   textAlign(LEFT);
+  
+  colorMode(RGB, 255, 255, 255);
 }
 
 void keyPressed() {
   if (key == CODED) {
     if (keyCode == RIGHT /*&& screen != PUT END SCREEN NUMBER HERE*/) {
       screen += 1;
+      reset_reaction(reactant_particles);
       background(255);
     }
     if (keyCode == LEFT && screen != 0) {
       screen -=1;
+      reset_reaction(reactant_particles);
       background(255);
     }
   }
