@@ -227,22 +227,3 @@ void ideal_gas_simulation() {
   }
   resetSettings();
 }
-
-void mousePressed() {
-
-  //non-ideal gas button
-  if (mouseX < width && mouseX > 600) {
-    if (mouseY < 100 && mouseY > 0) {
-      ideal = false;
-      reset_particles(gas_particles);
-    }
-  }
-
-  //ideal gas button
-  if (mouseX < 200 && mouseX > 0) {
-    if (mouseY < 100 && mouseY > 0) {
-      ideal = true;
-      reset_particles(gas_particles);
-    }
-  }
-}
