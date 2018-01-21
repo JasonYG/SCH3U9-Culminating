@@ -37,9 +37,9 @@ void setup() {
   stoich2 = loadImage("Stoichiometry Part 2.png");
 
   curve = loadImage("titration_curve.png");
-
+  
   cat = loadImage("super cat.png");
-
+  
   oxygen_diagram = loadImage("oxygen energy diagram.png");
   uncertainty_equation = loadImage("Heisenberg uncertainty.png");
 }
@@ -101,7 +101,7 @@ void draw() {
   case 13:
     titration_explanation();
     break;
-
+    
   case 14:
     career();
     break;
@@ -125,7 +125,7 @@ void draw() {
   case 19:
     cat();
     break;
-
+    
   case 20:
     entanglement();
     break;
@@ -137,24 +137,20 @@ void draw() {
   case 22:
     einstein_quote();
     break;
-
+    
   case 23:
     quantum_model();
     break;
-
+    
   case 24:
     oxygen();
     break;
-
+    
   case 25:
     uncertainty();
     break;
-
+    
   case 26:
-    connection_quantum_computing();
-    break;
-
-  case 27:
     references();
     break;
   }
@@ -177,7 +173,7 @@ void resetSettings() {
 
 void keyPressed() {
   if (key == CODED) {
-    if (keyCode == RIGHT && screen != 17 && screen != 27) {
+    if (keyCode == RIGHT && screen != 17 && screen != 26) {
       screen += 1;
       background(0);
     }

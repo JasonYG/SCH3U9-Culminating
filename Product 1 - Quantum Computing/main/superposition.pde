@@ -216,7 +216,7 @@ void mousePressed() {
     }
   }
   //button for last screen
-  if (screen == 26) {
+  if (screen == 27) {
     if (mouseX > width*0.25 - 175 && mouseX < width*0.25 + 175 && mouseY < 510 + 60 && mouseY > 510 - 60) {
       screen = 0;
     }
