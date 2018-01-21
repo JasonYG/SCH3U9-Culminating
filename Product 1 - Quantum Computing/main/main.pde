@@ -1,6 +1,6 @@
 /*
  * Author: Jason Guo
- * Revision Date: November 29, 2017
+ * Revision Date: January 21, 2018
  * Program Name: Product 1 - Quantum Computing
  * Program Description:
  *         Program developed as a part of the SCH3U9 culminating project.
