@@ -21,7 +21,16 @@ void hydrocarbon_table() {
   imageMode(CENTER);
   image(hydrocarbon_naming, width/2, height/2, width, height);
 }
-
+void alcohols() {
+  background(255);
+  imageMode(CENTER);
+  image(alcohol_text, width/2, height/2, width, height);
+}
+void alcohols_continued() {
+  background(255);
+  imageMode(CENTER);
+  image(alcohol_naming_text, width/2, height/2, width, height);
+}
 void alcohol_properties() {
   background(255);
   imageMode(CENTER);

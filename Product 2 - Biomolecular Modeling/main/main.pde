@@ -41,6 +41,11 @@ PImage organic_base_text;
 PImage acidity_of_carboxylic_acids_text;
 PImage career_text;
 
+Atom[] benzene;
+Atom[] connecting_carbons;
+Atom[] amine_group;
+Atom[] carboxyl_group;
+
 void settings() {
   size(800, 600);
 }
@@ -78,6 +83,11 @@ void setup() {
   organic_base_text = loadImage("Example of an organic base.png");
   acidity_of_carboxylic_acids_text = loadImage("Acidity of carboxylic acids.png");
   career_text = loadImage("Career opportunities.png");
+
+  benzene = new Atom[11];
+  connecting_carbons = new Atom[5];
+  amine_group = new Atom[3];
+  carboxyl_group = new Atom[4];
 }
 
 void draw() {
@@ -103,87 +113,103 @@ void draw() {
     break;
 
   case 5:
-    alcohol_properties();
+    alcohols();
     break;
 
   case 6:
-    carboxylic_acids();
-      break;
+    alcohols_continued();
+    break;
 
   case 7:
-    carboxylic_properties();
+    alcohol_properties();
     break;
 
   case 8:
-    periodic_trends();
+    carboxylic_acids();
     break;
 
   case 9:
-    more_trends();
+    carboxylic_properties();
     break;
 
   case 10:
-    relevance_to_orgo();
+    periodic_trends();
     break;
 
   case 11:
-    amino_acids();
+    more_trends();
     break;
 
   case 12:
-    bio_reactions();
+    relevance_to_orgo();
     break;
 
   case 13:
-    condensation();
+    amino_acids();
     break;
 
   case 14:
-    example_reaction();
+    bio_reactions();
     break;
 
   case 15:
-    energy_change();
+    condensation();
     break;
 
   case 16:
-    redox();
+    example_reaction();
     break;
 
   case 17:
-    redox_reaction();
+    energy_change();
     break;
 
   case 18:
-    stoich();
+    redox();
     break;
 
   case 19:
-    stoich_continued ();
+    redox_reaction();
     break;
 
   case 20:
-    organic_acid_bases();
+    stoich();
     break;
 
   case 21:
-    pka();
+    stoich_continued ();
     break;
 
   case 22:
-    pka_ph();
+    organic_acid_bases();
     break;
 
   case 23:
-    organic_base();
+    pka();
     break;
 
-  case 24: 
-    acidity_of_carboxylic_acids();
+  case 24:
+    pka_ph();
     break;
 
   case 25:
+    organic_base();
+    break;
+
+  case 26: 
+    acidity_of_carboxylic_acids();
+    break;
+
+  case 27:
+    protein_analysis();
+    break;
+
+  case 28:
     career();
+    break;
+
+  case 29:
+    references();
     break;
   }
 }
@@ -206,7 +232,7 @@ void resetSettings() {
 
 void keyPressed() {
   if (key == CODED) {
-    if (keyCode == RIGHT /*&& screen != PUT END SCREEN NUMBER HERE*/) {
+    if (keyCode == RIGHT && screen != 29) {
       screen += 1;
       background(255);
     }
